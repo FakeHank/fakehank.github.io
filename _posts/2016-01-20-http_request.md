@@ -2,11 +2,9 @@
 layout: post
 title: HTTP Request Study Conclusion
 date: 2016-01-20
-categories: [技术.JAVA]
+categories: [PROGRAMMER.JAVA]
 
 ---
-
-#HTTP REQUEST
 
 ###HTTP request headers
 

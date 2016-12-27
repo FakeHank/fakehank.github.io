@@ -1,12 +1,10 @@
 ---
 layout: post
-title: JAVA GC BASICS CONCLUDEs
+title: Java GC Basics Conclusion
 date: 2016-01-23
-categories: [技术.JAVA]
+categories: [PROGRAMMER.JAVA]
 
 ---
-
-#JAVA GARBAGE COLLECTION BASICS CONCLUDEs
 
 ###JVM Generations
 
