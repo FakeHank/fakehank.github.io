@@ -2,7 +2,7 @@
 layout: post
 title: Curry和Durant，谁才是勇士队队中最好的球员
 date: 2016-11-30
-categories: [随便写写.NBA]
+categories: [随便写写_NBA]
 
 ---
 

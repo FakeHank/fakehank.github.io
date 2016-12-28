@@ -2,7 +2,8 @@
 layout: post
 title: Java GC Basics Conclusion
 date: 2016-01-23
-categories: [PROGRAMMER.JAVA]
+categories: [PROGRAMMER_JAVA]
+tags: [PROGRAMMER]
 
 ---
 

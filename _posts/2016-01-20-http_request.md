@@ -2,7 +2,8 @@
 layout: post
 title: HTTP Request Study Conclusion
 date: 2016-01-20
-categories: [PROGRAMMER.JAVA]
+categories: [PROGRAMMER_JAVA]
+tags: [PROGRAMMER]
 
 ---
 

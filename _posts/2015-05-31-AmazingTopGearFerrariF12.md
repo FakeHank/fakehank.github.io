@@ -2,7 +2,8 @@
 layout: post
 title: Amazing Top Gear Ferrari F12 BERLINETTA
 date: 2015-05-31
-categories: [随便写写.乱七八糟的爱好]
+categories: [随便写写_乱七八糟的爱好]
+tags: [随便写写]
 
 ---
 

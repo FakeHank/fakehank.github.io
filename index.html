@@ -39,21 +39,64 @@ layout: default
         </div>
     </section> -->
     <section>
-        <h2 id="category-title">文章分类</h2>
-        {% assign sorted_categories = (site.categories | sort %) %}
-        {% for category in sorted_categories %}
-            <a name="{{ category | first }}"></a>
-            <h3 class="mainpage-category">
-                <span id="mainpage-category-{{ forloop.index }}">
-                    [+] {{ category | first }} ({{ category | last | size }})
-                </span>
+        <!-- 预处理文章分类数组 -->
+            <!-- {% for category in sorted_categories %} -->
+            <!-- 不知道为什么assign在这里不能用，最终看文档找到了capture这么一个方法，然后赋值成功了 -->
+            <!-- {% capture cate_split %}{{ category.first | split: '.' | first }} {% endcapture %} -->
+            <!-- 好像是只能用静态的值而不能用变量 -->
+            <!-- {% assign maincate_array = (maincate_array | push: (cate_split))  }} %}
+            <div>{{ maincate_array | first }}</div>
+        {% endfor %}  -->
+
+        
+        {% assign rawtags = "" %}
+        {% for post in site.posts %}
+            {% assign ttags = post.tags | join:'|' | append:'|' %}
+            {% assign rawtags = rawtags | append:ttags %}
+        {% endfor %}
+        {% assign rawtags = rawtags | split:'|' | sort %}
+        {% assign tags = "" %}
+        {% for tag in rawtags %}
+            {% if tag != "" %}
+                {% if tags == "" %}
+                    {% assign tags = tag | split:'|' %}
+                {% endif %}
+                {% unless tags contains tag %}
+                    {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+                {% endunless %}
+            {% endif %}
+        {% endfor %}
+
+        
+
+        <!-- 输出页面 -->
+        <h2 id="category-title">
+            文章分类 <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+        </h2>
+        {% for tag in tags %}
+            <h3 class="mainpage-tag">
+                <span id="mainpage-tag-{{ forloop.index }}">
+                    {{ tag }}
+                </span> 
             </h3>
-            <ul class="article-list" id="list{{ forloop.index }}" hidden="true">
-                {% for post in category.last %} 
-                    <li class="article-list-item">
-                        <span> {{ post.date | date:"%m/%d/%Y" }} <a href="{{ post.url }}">{{ post.title }}</a> </span></li>
-                {% endfor %}
-            </ul> 
+            <div class="mainpage-div" id="mainpage-div-{{ forloop.index }}" hidden="true">
+            {% for category in site.categories %}
+                {% if category.first contains tag %}
+                    <h4 class="mainpage-category">
+                        <span id="mainpage-category-{{ forloop.index }}">
+                            [+] {{ category | first }} ({{ category | last | size }})
+                        </span>
+                    </h4>
+                    <ul class="article-list" id="list{{ forloop.index }}" hidden="true">
+                        {% for post in category.last %} 
+                            <li class="article-list-item">
+                                <span> {{ post.date | date:"%m/%d/%Y" }} <a href="{{ post.url }}">{{ post.title }} </a> </span></li>
+                        {% endfor %}
+                    </ul> 
+                {% endif %}
+            {% endfor %}
+            </div>
+                
         {% endfor %}
     </section>
 </div>

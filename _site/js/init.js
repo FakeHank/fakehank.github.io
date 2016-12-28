@@ -99,6 +99,7 @@
 
 		// Main Sections: Two.
 
+
 			// Lightbox gallery.
 				$('#two').poptrox({
 					caption: function($a) { return $a.next('h3').text(); },
@@ -113,6 +114,20 @@
 					usePopupNav: true,
 					windowMargin: (skel.isActive('small') ? 0 : 50)
 				});
+
+
+				$('#category-title').click(function(){
+					$('.article-list').hide();
+					$('.mainpage-div').show();
+				})
+
+				//处理mouseenter事件
+				$('.mainpage-tag span').mouseenter(function(){
+					$('.article-list').hide();
+					$('.mainpage-div').hide();
+					var id = '#mainpage-div-' + $(this).attr('id').substring(13);
+					$(id).show();
+				})
 
 				$('.mainpage-category span').mouseenter(function(){
 					$('.article-list').hide();
