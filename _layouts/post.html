@@ -12,43 +12,23 @@ layout: default
             {{ content }}
         </section>
         
-        <!-- <footer>
-            <div class="row">
-            {% if page.previous %}
-            
-                <article class="{% cycle '6u', '6u$' %} 12u(small) excerpt">
-                    <header>
-                        <h2><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></h2>
-                    </header>
-                    <section>
-                        {{ page.previous.excerpt }}
-                    </section>
-                    <footer>
-                        <ul class="actions">
-                            <li><a href="{{ page.previous.url }}" class="button">Read More</a></li>
-                        </ul>
-                    </footer>
-                </article>
-            {% endif %}
-            
-            {% if page.next %}
-            
-                <article class="{% cycle '6u', '6u$' %} 12u(small) excerpt f-right">
-                    <header>
-                        <h2><a href="{{ page.next.url }}">{{ page.next.title }}</a></h2>
-                    </header>
-                    <section>
-                        {{ page.next.excerpt | markdownify }}
-                    </section>
-                    <footer>
-                        <ul class="actions">
-                            <li><a href="{{ page.next.url }}" class="button">Read More</a></li>
-                        </ul>
-                    </footer>
-                </article>
-            {% endif %}
-            </div>
-        </footer> -->
+    <!-- 多说评论框 start 
+    <div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) 
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"fakehank"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] 
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+        </script>
+    <!-- 多说公共JS代码 end  -->
+                                
 
     </article>
 
