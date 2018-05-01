@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+  		<title>Hank</title>
+  		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  		<meta name="description" content="" />
+  		<meta name="keywords" content="" />
+
+      <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.poptrox.min.js"></script>
+      <script src="/js/skel.min.js"></script>
+      <script src="/js/init.js"></script>
+  		<noscript>
+        <link rel="stylesheet" href="/css/style.css" />
+  			<link rel="stylesheet" href="/css/skel.css" />
+  			<link rel="stylesheet" href="/css/style-xlarge.css" />
+  		</noscript>
+  		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+  	</head>
+
+	<body id="top">
+
+      <header id="header">
+          <a href="#" class="image avatar"><img src="/images/Hank.jpg" alt="" /></a>
+          <h1><strong><a href="/">Hank 袁榛池</a></strong>,<br /> Restraint, Focus. 
+          <br/> 守心，克己<br/></h1>
+      </header>
+
+      <div id="main">
+    <article>
+        <header class="major">
+            <h2 class="post-title">Parallel & Multithreaded Programming(2)</h2>
+                <p class="post-meta">Feb 16, 2017</p>
+        </header>
+
+        <section>
+            <p><strong>Atomic</strong>: Atomic operations are uninterruptible</p>
+
+<p><strong>Guaranteed to be atomic in Java</strong></p>
+
+<ul>
+  <li>Reads, writes of non-64-bit primitive types (ints, chars, floats, etc.)</li>
+  <li>Reads, writes of references (32-bit and 64-bit)</li>
+</ul>
+
+<p><strong>Two aspects of an opration</strong></p>
+
+<ul>
+  <li>Atomic</li>
+  <li>Visibility</li>
+</ul>
+
+<p><strong>Volatile</strong>: is used to mark a Java variable as “being stored in main memory”</p>
+
+<p><strong>Sharing Objects</strong></p>
+
+<ul>
+  <li>Publishing</li>
+  <li>Escape (unintended pulishing)</li>
+</ul>
+
+<p><strong>Thread Local</strong></p>
+
+<p><strong>Anonymous Inner Class</strong></p>
+
+<p><strong>An object is immutable if</strong></p>
+
+<ul>
+  <li>All its fields are final</li>
+  <li>Its state never changes after construction</li>
+  <li>Properly constructed (<code class="highlighter-rouge">this</code> does not escape)</li>
+</ul>
+
+<p><strong>To avoid publication problems for mutable objects</strong>:</p>
+
+<ul>
+  <li>Make sure objects are properly constructed
+    <ul>
+      <li>store reference in volatile variable</li>
+      <li>store reference in final field of a properly constructed object</li>
+      <li>store reference in a variable that is properly locked</li>
+    </ul>
+  </li>
+  <li>Initialize objects in a static initializer</li>
+</ul>
+
+
+        </section>
+        
+    <!-- 多说评论框 start 
+    <div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) 
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"fakehank"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] 
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+        </script>
+    <!-- 多说公共JS代码 end  -->
+                                
+
+    </article>
+
+</div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+
+              
+              <li>
+                <a href="https://github.com/FakeHank" class="icon fa-github">
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://twitter.com/example" class="icon fa-twitter">
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://linkedin.com/in/example" class="icon fa-linkedin">
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://plus.google.com/neiyohank" class="icon fa-google-plus">
+                  <span class="label">Google+</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://www.facebook.com/example" class="icon fa-facebook">
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="mailto:zhenchi.yuan@yahoo.com" class="icon fa-envelope-o">
+                  <span class="label">Email</span>
+                </a>
+              </li>
+              
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Hank</li>
+                <li>Jekyll Template: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </footer>
+
+	</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+  		<title>Hank</title>
+  		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  		<meta name="description" content="" />
+  		<meta name="keywords" content="" />
+
+      <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.poptrox.min.js"></script>
+      <script src="/js/skel.min.js"></script>
+      <script src="/js/init.js"></script>
+  		<noscript>
+        <link rel="stylesheet" href="/css/style.css" />
+  			<link rel="stylesheet" href="/css/skel.css" />
+  			<link rel="stylesheet" href="/css/style-xlarge.css" />
+  		</noscript>
+  		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+  	</head>
+
+	<body id="top">
+
+      <header id="header">
+          <a href="#" class="image avatar"><img src="/images/Hank.jpg" alt="" /></a>
+          <h1><strong><a href="/">Hank 袁榛池</a></strong>,<br /> Restraint, Focus. 
+          <br/> 守心，克己<br/></h1>
+      </header>
+
+      <div id="main">
+    <article>
+        <header class="major">
+            <h2 class="post-title">Parallel & Multithreaded Programming(0)</h2>
+                <p class="post-meta">Jan 24, 2017</p>
+        </header>
+
+        <section>
+            <ul>
+  <li>Concurrent - unrelated to physical processor</li>
+  <li>Parallel - each flow has its own processor</li>
+  <li>Distributed</li>
+</ul>
+
+<p><strong>Java Memory Model</strong></p>
+
+<ul>
+  <li>
+    <p>Stack</p>
+
+    <ul>
+      <li>Local Variable</li>
+      <li>Method Parameters</li>
+    </ul>
+  </li>
+  <li>
+    <p>Heap</p>
+
+    <ul>
+      <li>Objects</li>
+      <li>Every call to new allocates space on heap.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Running threads on Processors:</strong></p>
+
+<ol>
+  <li>Scheduler</li>
+  <li>Scheduling policy</li>
+  <li>Context switch (p26)</li>
+</ol>
+
+<p>Processes: 1. on single machine; 2. not necessarily on a single processor.</p>
+
+<p>Threads: 1. usually on a single processor; 2. some support thread migration.</p>
+
+<p><strong>Two Approaches:</strong></p>
+
+<ol>
+  <li>Extends Thread;</li>
+  <li>Implements Runnable;</li>
+</ol>
+
+<p>Pros:</p>
+
+<ol>
+  <li>Easy access to Thread; No intermediate object.</li>
+  <li>Can Inheritate from another class; Protect other Thread methods (start()).</li>
+</ol>
+
+<p><strong>Thread States</strong></p>
+
+<p>Thread.State/getState()</p>
+
+<ul>
+  <li>NEW –start()–&gt; RUNNABLE</li>
+  <li>BLOCKED</li>
+  <li>WAITING</li>
+  <li>TIMED WAITING</li>
+  <li>TERMINATED</li>
+</ul>
+
+<p>isAlive()
+void join()</p>
+
+        </section>
+        
+    <!-- 多说评论框 start 
+    <div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) 
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"fakehank"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] 
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+        </script>
+    <!-- 多说公共JS代码 end  -->
+                                
+
+    </article>
+
+</div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+
+              
+              <li>
+                <a href="https://github.com/FakeHank" class="icon fa-github">
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://twitter.com/example" class="icon fa-twitter">
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://linkedin.com/in/example" class="icon fa-linkedin">
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://plus.google.com/neiyohank" class="icon fa-google-plus">
+                  <span class="label">Google+</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://www.facebook.com/example" class="icon fa-facebook">
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="mailto:zhenchi.yuan@yahoo.com" class="icon fa-envelope-o">
+                  <span class="label">Email</span>
+                </a>
+              </li>
+              
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Hank</li>
+                <li>Jekyll Template: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </footer>
+
+	</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+  		<title>Hank</title>
+  		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  		<meta name="description" content="" />
+  		<meta name="keywords" content="" />
+
+      <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.poptrox.min.js"></script>
+      <script src="/js/skel.min.js"></script>
+      <script src="/js/init.js"></script>
+  		<noscript>
+        <link rel="stylesheet" href="/css/style.css" />
+  			<link rel="stylesheet" href="/css/skel.css" />
+  			<link rel="stylesheet" href="/css/style-xlarge.css" />
+  		</noscript>
+  		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+  	</head>
+
+	<body id="top">
+
+      <header id="header">
+          <a href="#" class="image avatar"><img src="/images/Hank.jpg" alt="" /></a>
+          <h1><strong><a href="/">Hank 袁榛池</a></strong>,<br /> Restraint, Focus. 
+          <br/> 守心，克己<br/></h1>
+      </header>
+
+      <div id="main">
+    <article>
+        <header class="major">
+            <h2 class="post-title">Parallel & Multithreaded Programming(3)</h2>
+                <p class="post-meta">Feb 28, 2017</p>
+        </header>
+
+        <section>
+            <p><strong>To design a thread-safe class:</strong></p>
+
+<ul>
+  <li>State variables (fields)</li>
+  <li>Specification (invariants)</li>
+  <li>Synchronization policy</li>
+</ul>
+
+<p>One commonly used synchronization policy, (performance is bad)</p>
+
+<ul>
+  <li>Make all fields private</li>
+  <li>Make all methods synchronized</li>
+</ul>
+
+<p><strong>Instance Confinement</strong></p>
+
+<p><strong>The Producer-Consumer Pattern</strong></p>
+
+<p><strong>Delegation ensures thread-safety if</strong></p>
+
+<ol>
+  <li>Instance fields are thread-safe</li>
+  <li>No invariant constrains multiple instance fields</li>
+  <li>No precondition requres checking of value of instance fields</li>
+  <li>Instance fields are not published</li>
+</ol>
+
+<p><strong>wait()/notify()/notifyAll()</strong></p>
+
+<ul>
+  <li>To suspend, a thread performs a <code class="highlighter-rouge">wait()</code></li>
+  <li>Other threads perform <code class="highlighter-rouge">notify()/notifyAll()</code> to enable resumption of suspended threads</li>
+</ul>
+
+<p><strong>how do you map tasks to threads?</strong></p>
+
+<ul>
+  <li>One thread used to execute all the tasks sequentially</li>
+  <li>One thread / task</li>
+</ul>
+
+<p><strong>An executor can be in one of three states</strong></p>
+
+<ul>
+  <li>Running:  executor is executing tasks, accepting new tasks</li>
+  <li>Shutdown: executor has stopped accepting new tasks, may or may not be finishing already accepted tasks</li>
+  <li>Terminated:  executor has terminated all worker threads and is done</li>
+</ul>
+
+<p><strong>Tasks Submitted After Shutdown</strong></p>
+
+<ul>
+  <li>Could just swallow the tasks</li>
+  <li>Could throw <code class="highlighter-rouge">RejectedExecutionException</code></li>
+</ul>
+
+
+        </section>
+        
+    <!-- 多说评论框 start 
+    <div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) 
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"fakehank"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] 
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+        </script>
+    <!-- 多说公共JS代码 end  -->
+                                
+
+    </article>
+
+</div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+
+              
+              <li>
+                <a href="https://github.com/FakeHank" class="icon fa-github">
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://twitter.com/example" class="icon fa-twitter">
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://linkedin.com/in/example" class="icon fa-linkedin">
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://plus.google.com/neiyohank" class="icon fa-google-plus">
+                  <span class="label">Google+</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://www.facebook.com/example" class="icon fa-facebook">
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="mailto:zhenchi.yuan@yahoo.com" class="icon fa-envelope-o">
+                  <span class="label">Email</span>
+                </a>
+              </li>
+              
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Hank</li>
+                <li>Jekyll Template: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </footer>
+
+	</body>
+</html>

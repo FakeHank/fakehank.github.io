@@ -2,13 +2,22 @@
 layout: post
 title: Parallel & Multithreaded Programming(2)
 date: 2017-02-16
-categories: [PROGRAMMER_JAVA]
-tags: [PROGRAMMER]
+categories: [不会写代码的数据分析师不是好的产品经理_PROGRAMMER]
+tags: [不会写代码的数据分析师不是好的产品经理]
 
 ---
 
-__Atomic__: Atomic operations are uninterruptible__Guaranteed to be atomic in Java__ * Reads, writes of non-64-bit primitive types (ints, chars, floats, etc.)* Reads, writes of references (32-bit and 64-bit)__Two aspects of an opration__
-* Atomic* Visibility
+__Atomic__: Atomic operations are uninterruptible
+
+__Guaranteed to be atomic in Java__ 
+
+* Reads, writes of non-64-bit primitive types (ints, chars, floats, etc.)
+* Reads, writes of references (32-bit and 64-bit)
+
+__Two aspects of an opration__
+
+* Atomic
+* Visibility
 
 __Volatile__: is used to mark a Java variable as "being stored in main memory"
 

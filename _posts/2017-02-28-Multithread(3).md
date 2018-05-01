@@ -2,8 +2,8 @@
 layout: post
 title: Parallel & Multithreaded Programming(3)
 date: 2017-02-28
-categories: [PROGRAMMER_JAVA]
-tags: [PROGRAMMER]
+categories: [不会写代码的数据分析师不是好的产品经理_PROGRAMMER]
+tags: [不会写代码的数据分析师不是好的产品经理]
 
 ---
 
@@ -41,5 +41,14 @@ __how do you map tasks to threads?__
 
 __An executor can be in one of three states__
 
-* Running:  executor is executing tasks, accepting new tasks* Shutdown: executor has stopped accepting new tasks, may or may not be finishing already accepted tasks* Terminated:  executor has terminated all worker threads and is done__Tasks Submitted After Shutdown__* Could just swallow the tasks* Could throw ```RejectedExecutionException```
-
+* Running:  executor is executing tasks, accepting new tasks
+* Shutdown: executor has stopped accepting new tasks, may or may not be finishing already accepted tasks
+* Terminated:  executor has terminated all worker threads and is done
+
+__Tasks Submitted After Shutdown__
+
+* Could just swallow the tasks
+* Could throw ```RejectedExecutionException```
+
+
+

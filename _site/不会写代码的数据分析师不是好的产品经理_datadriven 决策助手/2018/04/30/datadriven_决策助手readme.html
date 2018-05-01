@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+  		<title>Hank</title>
+  		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  		<meta name="description" content="" />
+  		<meta name="keywords" content="" />
+
+      <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/jquery.poptrox.min.js"></script>
+      <script src="/js/skel.min.js"></script>
+      <script src="/js/init.js"></script>
+  		<noscript>
+        <link rel="stylesheet" href="/css/style.css" />
+  			<link rel="stylesheet" href="/css/skel.css" />
+  			<link rel="stylesheet" href="/css/style-xlarge.css" />
+  		</noscript>
+  		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+  	</head>
+
+	<body id="top">
+
+      <header id="header">
+          <a href="#" class="image avatar"><img src="/images/Hank.jpg" alt="" /></a>
+          <h1><strong><a href="/">Hank 袁榛池</a></strong>,<br /> Restraint, Focus. 
+          <br/> 守心，克己<br/></h1>
+      </header>
+
+      <div id="main">
+    <article>
+        <header class="major">
+            <h2 class="post-title">DataDriven决策助手 readme[持续更新]</h2>
+                <p class="post-meta">Apr 30, 2018</p>
+        </header>
+
+        <section>
+            <p>###来自一个想法：当每天能够接触的信息越来越多、越来越杂乱，如何快速获取、理解信息并将信息作为决策的输入？</p>
+
+<h3 id="核心诉求">核心诉求：</h3>
+
+<p>提高信息获取、使用效率</p>
+
+<p>###拆解与落地：</p>
+
+<h4 id="拆解">拆解</h4>
+
+<ul>
+  <li>
+    <p>信息获取：</p>
+
+    <ul>
+      <li>__现状：信息碎片化，各个公开数据形成信息孤岛。__例如查询二手房信息需要主动上某二手房网站，要求一定的目的性及时间成本，且获取数据为一个时间点的数据。</li>
+      <li>__解决方案：编写增量爬虫，维护行业/领域信息库。__实现自动化爬虫，统一存储维护，打通、整合关联数据。</li>
+      <li><strong>优势</strong>：可长期监控数据走势，掌握历史数据及走势；根据需求建立数据模型，物理层数据即可关联，直观</li>
+      <li><strong>劣势</strong>：需要根据页面改版维护爬虫、清洗；需要编写代码自动化任务调度</li>
+    </ul>
+  </li>
+  <li>
+    <p>信息使用：</p>
+
+    <ul>
+      <li>__现状：效率低下且需要较强目的性，__由于信息获取渠道、方式多样，使用信息基本靠突发奇想以及绞尽脑汁地关联以达到特定目的。</li>
+      <li>__解决方案：可视化/结构化 信息，并进行邮件/APP/微信推送。__将数据进行可视化或者将其处理的主次分明，并进行 日/周 推送，可达到干货极强的关注领域新闻效果。</li>
+      <li><strong>优势：极高提升信息使用效率</strong></li>
+      <li><strong>劣势：前期需要做较多准备工作（调研业务、建模、写代码）</strong></li>
+    </ul>
+
+    <p>​</p>
+  </li>
+</ul>
+
+<p>####落地</p>
+
+<ul>
+  <li>硬件
+    <ul>
+      <li>一个服务器：由于数据量级大，选择自建物理服务器
+        <ul>
+          <li>主板：七彩虹 C.Q1900M 全固态 四核集成CPU</li>
+          <li>内存：同事淘汰的金士顿1333-4g</li>
+          <li>硬盘：希捷1T ST1000DM010</li>
+          <li>主机：酷冷至尊 特警365</li>
+          <li>电源：酷冷至尊 400w ATX MsterWatt Lite 80PLUS</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>软件
+    <ul>
+      <li>操作系统：Ubuntu Server 16.04.4</li>
+    </ul>
+  </li>
+  <li>进度
+    <ul>
+      <li>主机正常，刚装好操作系统</li>
+    </ul>
+  </li>
+  <li>代码
+    <ul>
+      <li>基于scrapy的 虎扑 湿乎乎模块 爬虫</li>
+      <li>基于scrapy的 乐有家 深圳 二手房 爬虫</li>
+    </ul>
+  </li>
+  <li>数据
+    <ul>
+      <li>湿乎乎2010-2018.1帖子数据，2015.11-2018.1帖子回帖数据</li>
+      <li>2018.4.30 乐有家深圳二手房 全量数据</li>
+    </ul>
+  </li>
+</ul>
+
+        </section>
+        
+    <!-- 多说评论框 start 
+    <div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) 
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"fakehank"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] 
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+        </script>
+    <!-- 多说公共JS代码 end  -->
+                                
+
+    </article>
+
+</div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+
+              
+              <li>
+                <a href="https://github.com/FakeHank" class="icon fa-github">
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://twitter.com/example" class="icon fa-twitter">
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://linkedin.com/in/example" class="icon fa-linkedin">
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://plus.google.com/neiyohank" class="icon fa-google-plus">
+                  <span class="label">Google+</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="https://www.facebook.com/example" class="icon fa-facebook">
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+              
+
+              
+              <li>
+                <a href="mailto:zhenchi.yuan@yahoo.com" class="icon fa-envelope-o">
+                  <span class="label">Email</span>
+                </a>
+              </li>
+              
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Hank</li>
+                <li>Jekyll Template: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </footer>
+
+	</body>
+</html>

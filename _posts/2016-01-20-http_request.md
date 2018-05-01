@@ -2,8 +2,8 @@
 layout: post
 title: HTTP Request Study Conclusion
 date: 2016-01-20
-categories: [PROGRAMMER_JAVA]
-tags: [PROGRAMMER]
+categories: [不会写代码的数据分析师不是好的产品经理_PROGRAMMER]
+tags: [不会写代码的数据分析师不是好的产品经理]
 
 ---
 
@@ -35,15 +35,46 @@ Understanding HTTP 1.1 Request Headers:
 
 ###Changing the page according to how the user got there
 
-	/** Servlet that displays referer-specific image. */	public class CustomizeImage extends HttpServlet 	{ 
-		public void doGet(HttpServletRequest request,		HttpServletResponse response) 
-			throws ServletException, IOException {			
+	/** Servlet that displays referer-specific image. */
+	public class CustomizeImage extends HttpServlet 	{ 
+		public void doGet(HttpServletRequest request,
+		HttpServletResponse response) 
+			throws ServletException, IOException {
+			
 			response.setContentType("text/html"); 
-			PrintWriter out = response.getWriter();			String referer = request.getHeader("Referer");
-			if (referer == null) {          		referer = "<I>none</I>";        	}			String title = "Referring page: " + referer; 			String imageName;			if (contains(referer, "JRun")) {          		imageName = "jrun-powered.gif";			} else if (contains(referer, "Resin")) { 
-				imageName = "resin-powered.gif";			} else {				imageName = "tomcat-powered.gif";			}			String imagePath = "../request-headers/images/" + imageName;
-			String docType ="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 " + "Transitional//EN\">\n";    		out.println(docType +				"<HTML>\n" +				"<HEAD><TITLE>" + title + "</TITLE></HEAD>\n" + 
-				"<BODY BGCOLOR=\"#FDF5E6\">\n" +				"<CENTER><H2>" + title + "</H2>\n" +				"<IMG SRC=\"" + imagePath + "\">\n" + "</CENTER></BODY></HTML>");		}
-				private boolean contains(String mainString, String subString) {				return(mainString.indexOf(subString) != -1); 
-		}	}
-One certain html page:			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> <HTML><HEAD><TITLE>Referer Test</TITLE></HEAD>	<BODY BGCOLOR="#FDF5E6">	<H1 ALIGN="CENTER">Referer Test</H1>	Click <A HREF="/servlet/coreservlets.CustomizeImage">here</A> to visit the servlet.	</BODY></HTML>
+			PrintWriter out = response.getWriter();
+			String referer = request.getHeader("Referer");
+			if (referer == null) {
+	      		referer = "<I>none</I>";
+	    	}
+			String title = "Referring page: " + referer; 			String imageName;
+			if (contains(referer, "JRun")) {
+	      		imageName = "jrun-powered.gif";
+			} else if (contains(referer, "Resin")) { 
+				imageName = "resin-powered.gif";
+			} else {
+				imageName = "tomcat-powered.gif";
+			}
+			String imagePath = "../request-headers/images/" + imageName;
+			String docType ="<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 " + "Transitional//EN\">\n";
+			out.println(docType +
+				"<HTML>\n" +
+				"<HEAD><TITLE>" + title + "</TITLE></HEAD>\n" + 
+				"<BODY BGCOLOR=\"#FDF5E6\">\n" +
+				"<CENTER><H2>" + title + "</H2>\n" +
+				"<IMG SRC=\"" + imagePath + "\">\n" + "</CENTER></BODY></HTML>");
+		}
+
+
+		private boolean contains(String mainString, String subString) {
+				return(mainString.indexOf(subString) != -1); 
+		}
+	}
+
+One certain html page:
+		
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> <HTML><HEAD><TITLE>Referer Test</TITLE></HEAD>
+	<BODY BGCOLOR="#FDF5E6">
+	<H1 ALIGN="CENTER">Referer Test</H1>
+	Click <A HREF="/servlet/coreservlets.CustomizeImage">here</A> to visit the servlet.
+	</BODY></HTML>

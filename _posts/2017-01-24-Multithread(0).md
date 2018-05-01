@@ -2,9 +2,8 @@
 layout: post
 title: Parallel & Multithreaded Programming(0)
 date: 2017-01-24
-categories: [PROGRAMMER_JAVA]
-tags: [PROGRAMMER]
-
+categories: [不会写代码的数据分析师不是好的产品经理_PROGRAMMER]
+tags: [不会写代码的数据分析师不是好的产品经理]
 ---
 
 * Concurrent - unrelated to physical processor

@@ -2,8 +2,8 @@
 layout: post
 title: Bit Manipulation Trick
 date: 2017-02-14
-categories: [PROGRAMMER_GENERAL]
-tags: [PROGRAMMER]
+categories: [不会写代码的数据分析师不是好的产品经理_PROGRAMMER]
+tags: [不会写代码的数据分析师不是好的产品经理]
 
 ---
 
