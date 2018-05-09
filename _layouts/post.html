@@ -43,7 +43,7 @@
 
       <!-- Intro -->
         <article id="intro" style="display: block;" class="active">
-          <h2 class="major">{{ page.title }}</h2>
+          <h2 class="major" style="width: auto;">{{ page.title }}</h2>
           <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
           <section>{{ content }}</section>
         <div class="close" onclick="window.history.back(-1)">Close</div></article>

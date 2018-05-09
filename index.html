@@ -103,7 +103,7 @@ layout: default
 			        	
 			        {% for tag in tags %}
 			            <h3 class="mainpage-tag">
-			                <span id="mainpage-tag-{{ forloop.index }}"  onmouseenter="$('.article-list').hide();
+			                <span id="mainpage-tag-{{ forloop.index }}"  onclick="$('.article-list').hide();
 										$('.mainpage-div').hide();
 										var id = '#mainpage-div-' + $(this).attr('id').substring(13);
 										$(id).show();">
@@ -115,7 +115,7 @@ layout: default
 			            {% for category in site.categories %}
 			                {% if category.first contains tag %}
 			                    <h4 class="mainpage-category" style="padding-left: 3%;">
-			                        <span id="mainpage-category-{{ forloop.index }}" onmouseenter="$('.article-list').hide();
+			                        <span id="mainpage-category-{{ forloop.index }}" onclick="$('.article-list').hide();
 										var id = '#list' + $(this).attr('id').substring(18);
 										$(id).show();">
 			                            [+] {{ category | first | split:'_' | last }} ({{ category | last | size }})
